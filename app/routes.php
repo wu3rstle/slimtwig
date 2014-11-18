@@ -11,4 +11,4 @@
  */
 $app->get('/', 'RootController:index')->setParams(array($twig));
 $app->get('/admin', 'RootController:admin')->setParams(array($twig));
-$app->get('/clearCache', 'RootController:clearCache')->setParams(array($tpl));
+$app->get('/clearCache', 'RootController:clearCache')->setParams(array($twig));
