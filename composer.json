@@ -1,0 +1,20 @@
+{
+	"name": "wu3rstle/slimtwig",
+	"description": "project template using slim, twig, bootstrap end eloquent orm",
+	"keywords": ["slim", "twig", "eloquent", "bootstrap", "template"],
+	"version": "1.0.0",
+	"type": "project",
+	"authors": [
+		{
+			"name": "wu3rstle",
+			"email": "wu3rstle@gmx.de",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"twig/twig": "~1.0",
+		"slim/slim": "2.*",
+		"illuminate/database": "*"
+	},
+	"minimum-stability": "stable"
+}
