@@ -11,7 +11,7 @@ return array(
 		// primary database connection
 		'default' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
+			'host'      => '127.0.0.1',
 			'database'  => 'dbname',
 			'username'  => 'username',
 			'password'  => 'password',
