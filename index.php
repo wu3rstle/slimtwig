@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once 'app/autoloader.php';
+include_once 'bootstrap/autoloader.php';
 require 'vendor/autoload.php';
 
 /***********************************************

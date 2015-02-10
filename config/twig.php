@@ -8,11 +8,11 @@
 
 return array(
 	'tpl_dir' => array(
-			'__main__' => 'app/views/base',
-			'frontend' => 'app/views/frontend',
-			'admin' => 'app/views/admin',
+			'__main__' => 'resources/views/base',
+			'frontend' => 'resources/views/frontend',
+			'admin' => 'resources/views/admin',
 	),
-	'cache' => 'vendor/twig/twig/cache',
+	'cache' => 'storage/framework/views',
 	'debug' => false,
 	'auto_reload' => true,
 );

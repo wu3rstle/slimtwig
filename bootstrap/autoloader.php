@@ -20,6 +20,6 @@ function __autoLoad($classname) {
 spl_autoload_register('__autoLoad');
 
 $config = array();
-foreach (glob('app/config/*.php') as $file) {
+foreach (glob('config/*.php') as $file) {
 	$config[basename($file, '.php')] = include_once $file;
 }
