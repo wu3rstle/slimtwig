@@ -1,31 +1,9 @@
 <?php
 /**
- * The content of this file is (c)  Versandhaus Walz GmbH
- * All rights reserved
- *
- * <Description>
- *
- * Libraries:
- * @link        <link>
- *
- * @copyright   (c) Versandhaus Walz GmbH, all rights reserved
- * @author      negdto
- * @version     $Id: LoggingMiddleware.php <001> 08.12.2014 10:24Z negdto
- */
- 
-//---- includes --------------------------------------
-
-//---- global settings -------------------------------
-
-//---- class -----------------------------------------
-
-/**
- * Class LoggingMiddleware
- *
-  * @author negdto
- * 
- * CreateDate: 08.12.2014 @ 10:24
- * LastChangesDate: 08.12.2014
+ * Created by PhpStorm.
+ * User: Tobias
+ * Date: 10.02.2015
+ * Time: 07:52
  */
 
 class LoggingMiddleware extends \Slim\Middleware
