@@ -10,3 +10,4 @@
  * Middlewares
  */
 $app->add(new MaintenanceMiddleware());
+$app->add(new LoggingMiddleware());
