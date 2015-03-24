@@ -22,7 +22,9 @@ class Db {
 	}
 
 	private function    getMigrationPath() {
-		return __DIR__ . "/database/migrations";
+		global $config;
+
+		return $config['database']['migrationPath'];
 	}
 
 	private function help() {

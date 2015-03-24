@@ -7,6 +7,8 @@
  */
 
 return array(
+	'migrationPath' => 'database/migrations',
+
 	'connections' => array(
 		// primary database connection
 		'default' => array(
