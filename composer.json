@@ -16,5 +16,13 @@
 		"slim/slim": "2.*",
 		"illuminate/database": "*"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "stable",
+  "autoload": {
+	"classmap": [
+	  "app/controllers/",
+	  "app/models/",
+	  "app/middlewares/",
+	  "helpers/"
+	]
+  }
 }
