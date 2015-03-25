@@ -2,7 +2,7 @@
 	"name": "wu3rstle/slimtwig",
 	"description": "project template using slim, twig, bootstrap end eloquent orm",
 	"keywords": ["slim", "twig", "eloquent", "bootstrap", "template"],
-	"version": "1.1.0",
+	"version": "1.1.2",
 	"type": "project",
 	"authors": [
 		{
@@ -17,12 +17,15 @@
 		"illuminate/database": "*"
 	},
 	"minimum-stability": "stable",
-  "autoload": {
-	"classmap": [
-	  "app/controllers/",
-	  "app/models/",
-	  "app/middlewares/",
-	  "helpers/"
-	]
-  }
+	"autoload": {
+		"classmap": [
+			"app/controllers/",
+			"app/models/",
+			"app/middlewares/",
+			"helpers/"
+		],
+		"psr-4": {
+			"Migration\\": "helpers/Migration/"
+		}
+	}
 }
