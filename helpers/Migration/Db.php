@@ -15,7 +15,8 @@ class Db {
 	}
 
 	private function help() {
-		echo "usage: php {$this->args[0]} <command> [<args>]\n";
+		echo "usage: php {$this->args[0]} <command>\n";
+		echo "allowed commands: \"migrate\", \"migration:rollback\"\n";
 	}
 
 	public function run() {
@@ -72,7 +73,7 @@ class Db {
 			$migration = new $class;
 			$migration->up();
 			Migration::create(array('migration' => $filename, 'batch' => $batch));
-			$this->line("<success>File \"$filename.php\" processed</success>");
+			$this->line("<success>File \"$filename.php\" processed</success>\n");
 		}
 	}
 
@@ -80,7 +81,7 @@ class Db {
 
 		$batch = Migration::all()->max('batch');
 
-		$migrations = Migration::where('batch', '=', $batch)->get();
+		$migrations = Migration::where('batch', '=', $batch)->orderBy('migration', 'desc')->get();
 
 		foreach($migrations as $dbMigration) {
 			$class = substr($dbMigration->migration, 18);
@@ -89,7 +90,7 @@ class Db {
 			$migration = new $class;
 			$migration->down();
 			Migration::where('migration', '=', $dbMigration->migration)->where('batch', '=', $dbMigration->batch)->delete();
-			$this->line("<success>File \"$filename.php\" processed</success>");
+			$this->line("<success>File \"$filename.php\" processed</success>\n");
 		}
 	}
 
