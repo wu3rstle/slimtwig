@@ -1,24 +1,62 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Tobias
+ * Date: 24.03.2015
+ * Time: 08:32
+ *
+ * @author      wu3rstle
+ */
+
 namespace Migration;
 
+//---- includes --------------------------------------
 use Illuminate\Database\Capsule\Manager as Capsule;
 
+//---- global settings -------------------------------
+
+//---- class -----------------------------------------
+
+/**
+ * Class Db
+ *
+ * @author wu3rstle
+ *
+ * CreateDate: 24.03.2015 @ 08:32
+ * LastChangesDate: 09.04.2015
+ */
 class Db {
+	/**
+	 * constructor
+	 *
+	 * @param array $args command line parameters
+	 */
 	public function __construct($args) {
 		$this->args = $args;
 	}
 
+	/**
+	 * get path to migration classes from config file
+	 *
+	 * @return mixed path to migration classes
+	 */
 	private function    getMigrationPath() {
 		global $config;
 
 		return $config['database']['migrationPath'];
 	}
 
+	/**
+	 * display help
+	 */
 	private function help() {
 		echo "usage: php {$this->args[0]} <command>\n";
 		echo "allowed commands: \"migrate\", \"migration:rollback\"\n";
 	}
 
+	/**
+	 * command handle
+	 */
 	public function run() {
 		if (count($this->args) <= 1) {
 			$this->help();
@@ -44,6 +82,9 @@ class Db {
 		}
 	}
 
+	/**
+	 * command migrate
+	 */
 	private function runMigrations() {
 		$files = glob($this->getMigrationPath() . '/*.php');
 
@@ -77,6 +118,9 @@ class Db {
 		}
 	}
 
+	/**
+	 * command migration:rollback
+	 */
 	private function rollbackMigrations() {
 
 		$batch = Migration::all()->max('batch');
@@ -94,6 +138,11 @@ class Db {
 		}
 	}
 
+	/**
+	 * prepare output lines
+	 *
+	 * @param string $line output
+	 */
 	public function line($line) {
 		$line = str_replace('</info>', chr(27) . '[0m', str_replace('<info>', chr(27) . '[36m ', $line));
 		$line = str_replace('</error>', chr(27) . '[0m', str_replace('<error>', chr(27) . '[31m ', $line));

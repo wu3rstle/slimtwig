@@ -4,9 +4,30 @@
  * User: Tobias
  * Date: 13.11.2014
  * Time: 19:57
+ *
+ * @author wu3rstle
+ */
+
+//---- includes --------------------------------------
+
+//---- global settings -------------------------------
+
+//---- class -----------------------------------------
+
+/**
+ * Class LoginMiddleware
+ *
+ * @author wu3rstle
+ *
+ * CreateDate: 13.11.2014 @ 19:57
+ * LastChangesDate: 09.04.2015
  */
 
 class MaintenanceMiddleware extends \Slim\Middleware {
+
+	/**
+	 * auto call function
+	 */
 	public function call() {
 		$app = $this->app;
 

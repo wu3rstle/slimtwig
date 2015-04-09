@@ -4,6 +4,8 @@
  * User: Tobias
  * Date: 23.10.2014
  * Time: 18:56
+ *
+ * @author wu3rstle
  */
 
 return array(
