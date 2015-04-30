@@ -51,7 +51,7 @@ class Db {
 	 */
 	private function help() {
 		echo "usage: php {$this->args[0]} <command>\n";
-		echo "allowed commands: \"migrate\", \"migration:rollback\"\n";
+		echo "allowed commands: \"migrate\", \"migrate:rollback\"\n";
 	}
 
 	/**
@@ -66,7 +66,7 @@ class Db {
 					$this->runMigrations();
 					break;
 
-				case 'migration:rollback':
+				case 'migrate:rollback':
 					$this->rollbackMigrations();
 					break;
 
