@@ -39,7 +39,6 @@ $app->config(array('twig' => $twig));
 
 include_once 'app/middlewares.php';
 include_once 'app/routes.php';
-include_once 'app/assignments.php';
 include_once 'app/constants.php';
 
 $app->run();
