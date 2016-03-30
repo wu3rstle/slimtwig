@@ -18,12 +18,10 @@
 	},
 	"minimum-stability": "stable",
 	"autoload": {
-		"classmap": [
-			"app/controllers/",
-			"app/models/",
-			"app/middlewares/",
-			"helpers/"
-		],
+		"psr-0": {
+			"App\\": "./",
+			"Helpers\\": "./"
+		},
 		"psr-4": {
 			"Migration\\": "helpers/Migration/"
 		}

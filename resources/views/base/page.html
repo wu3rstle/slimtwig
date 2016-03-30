@@ -7,7 +7,7 @@
 	<title>{{ config.appName }} - {% block title %}{% endblock %}</title>
 
 	<!-- Bootstrap -->
-	<link href="{{baseUrl}}resources/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="{{baseUrl}}resources/public/css/app.css" rel="stylesheet">
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -16,7 +16,6 @@
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
-	<link href="{{baseUrl}}resources/assets/css/main.css" rel="stylesheet" >
 	{% block additionalCSS %}{% endblock %}
 </head>
 <body>
@@ -45,11 +44,8 @@
 	</div>
 </div><!-- close container -->
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="{{baseUrl}}resources/assets/libs/bootstrap/js/bootstrap.min.js"></script>
-<script src="{{baseUrl}}resources/assets/js/main.js"></script>
+<script src="{{baseUrl}}resources/public/js/app.js"></script>
 {% block additionalJS %}{% endblock %}
 </body>
 </html>

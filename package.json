@@ -1,0 +1,23 @@
+{
+	"name": "shop_monitor",
+	"version": "1.0.0",
+	"description": "Package for shop_monitor",
+	"scripts": {
+		"test": "echo \"TODO: TBD!\" && exit 1"
+	},
+	"repository": {
+		"type": "git"
+	},
+	"authors": [
+		"wu3rstle <wu3rstle@gmx.de>"
+	],
+	"private": true,
+	"devDependencies": {
+		"jquery": "*",
+		"bootstrap-sass": "*",
+		"font-awesome": "*",
+		"gulp": "*",
+		"laravel-elixir": "*",
+		"is_js": "*"
+	}
+}

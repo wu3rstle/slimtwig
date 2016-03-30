@@ -39,6 +39,12 @@ $app->config(array('twig' => $twig));
 
 include_once 'app/constants.php';
 include_once 'app/middlewares.php';
-include_once 'app/routes.php';
+
+/***********************************************
+ * load routes dynamic
+ **********************************************/
+foreach (glob('app/routes/*.php') as $file) {
+	include_once $file;
+}
 
 $app->run();
