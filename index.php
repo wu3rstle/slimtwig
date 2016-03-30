@@ -7,7 +7,7 @@
  *
  * @author wu3rstle
  */
-
+session_save_path('storage/app/sessions');
 session_start();
 
 require 'vendor/autoload.php';
