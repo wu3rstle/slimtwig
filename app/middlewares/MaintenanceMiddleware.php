@@ -7,7 +7,7 @@
  *
  * @author wu3rstle
  */
-
+namespace App\Middlewares;
 //---- includes --------------------------------------
 
 //---- global settings -------------------------------

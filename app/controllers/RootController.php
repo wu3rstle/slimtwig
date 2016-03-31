@@ -7,7 +7,7 @@
  *
  * @author wu3rstle
  */
-
+namespace App\Controllers;
 //---- includes --------------------------------------
 
 //---- global settings -------------------------------

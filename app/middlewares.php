@@ -11,5 +11,5 @@
 /**
  * Middlewares
  */
-$app->add(new MaintenanceMiddleware());
-$app->add(new LoggingMiddleware());
+$app->add(new App\Middlewares\MaintenanceMiddleware());
+$app->add(new App\Middlewares\LoggingMiddleware());

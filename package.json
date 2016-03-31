@@ -1,7 +1,6 @@
 {
-	"name": "shop_monitor",
-	"version": "1.0.0",
-	"description": "Package for shop_monitor",
+	"name": "slimtwig",
+	"description": "Package for slimtwig",
 	"scripts": {
 		"test": "echo \"TODO: TBD!\" && exit 1"
 	},

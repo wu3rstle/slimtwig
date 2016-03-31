@@ -7,11 +7,11 @@
  *
  * @author wu3rstle
  */
-session_save_path('storage/app/sessions');
+//session_save_path(__DIR__ . '/storage/app/sessions');
 session_start();
 
 require 'vendor/autoload.php';
-include_once 'bootstrap/autoloader.php';
+include_once 'app/autoloader.php';
 
 /***********************************************
  * init Slim
